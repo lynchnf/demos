@@ -12,5 +12,6 @@
 
     <modules>
         <module>demo-common</module>
+        <module>demo-java</module>
     </modules>
 </project>

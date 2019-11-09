@@ -27,7 +27,13 @@ public class DemoBean {
         this.parameterValue = parameterValue;
     }
 
-    public static DemoBean sleepAndGe(DemoBeanType type, String parameterValue) {
+    // A factory method.
+    public static DemoBean sleepAndGet(DemoBeanType type) {
+        return sleepAndGet(type, null);
+    }
+
+    // Another factory method.
+    public static DemoBean sleepAndGet(DemoBeanType type, String parameterValue) {
         // Fast or slow? Flip a coin.
         long sleepMillis = 0L;
         int coin = RANDOM.nextInt(2);
@@ -51,7 +57,7 @@ public class DemoBean {
             LOGGER.warn("Sleep interrupted.", e);
         }
         // Build latency message based on how long we actually slept.
-        long latency = System.currentTimeMillis() - sleepMillis;
+        long latency = System.currentTimeMillis() - startTimeMillis;
         String latencyMessage;
         if (latency <= 1000L) {
             latencyMessage = String.format(LATENCY_MESSAGE_FORMAT_LESS, latency);
@@ -106,7 +112,7 @@ public class DemoBean {
         return "DemoBean{" +
                 "status=" + status +
                 ", latencyMessage='" + latencyMessage + '\'' +
-                (pathParameter ? ", parameterValue='" + parameterValue + '\'' : "") + '\'' +
+                (pathParameter ? ", parameterValue='" + parameterValue + '\'' : "") +
                 '}';
         // @formatter:on
     }
