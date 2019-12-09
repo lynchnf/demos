@@ -22,7 +22,7 @@ public class RestTemplateTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void hello() throws Exception {
+    public void hello() {
         ResponseEntity<DemoBean> response =
                 restTemplate.getForEntity("http://localhost:" + port + "/hello/foobar", DemoBean.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());

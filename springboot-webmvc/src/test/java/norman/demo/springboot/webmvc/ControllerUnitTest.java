@@ -3,6 +3,8 @@ package norman.demo.springboot.webmvc;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import static org.junit.Assert.*;
 
@@ -21,7 +23,8 @@ public class ControllerUnitTest {
 
     @Test
     public void hello() {
-        DemoBean bean = controller.hello("foobar");
-        assertEquals("Hello foobar.", bean.getDemoString());
+        ResponseEntity<DemoBean> response = controller.hello("foobar");
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals("Hello foobar.", response.getBody().getDemoString());
     }
 }
