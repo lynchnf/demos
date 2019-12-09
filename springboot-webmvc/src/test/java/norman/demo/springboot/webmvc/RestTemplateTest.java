@@ -10,12 +10,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class HttpRequestTest {
+public class RestTemplateTest {
     @LocalServerPort
     private int port;
     @Autowired
@@ -27,6 +27,5 @@ public class HttpRequestTest {
                 restTemplate.getForEntity("http://localhost:" + port + "/hello/foobar", DemoBean.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals("Hello foobar.", response.getBody().getDemoString());
-
     }
 }
