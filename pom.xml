@@ -13,5 +13,6 @@
     <modules>
         <module>demo-common</module>
         <module>demo-java</module>
+        <module>springboot-webmvc</module>
     </modules>
 </project>
