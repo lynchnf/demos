@@ -1,4 +1,4 @@
-package norman.demo.springboot.jersey;
+package norman.demo.spring.jersey;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

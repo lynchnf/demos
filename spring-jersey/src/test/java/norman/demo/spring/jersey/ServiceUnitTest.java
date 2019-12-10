@@ -1,4 +1,4 @@
-package norman.demo.springboot.jersey;
+package norman.demo.spring.jersey;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package norman.demo.springboot.jersey;
+package norman.demo.spring.jersey;
 
 public class DemoBean {
     private String demoString;
