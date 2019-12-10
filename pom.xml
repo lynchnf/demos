@@ -11,11 +11,10 @@
     <name>Demos</name>
 
     <modules>
-        <module>demo-common</module>
-        <module>demo-java</module>
         <module>springboot-webmvc</module>
         <module>springboot-webflux</module>
         <module>springboot-jersey</module>
         <module>spring-webmvc</module>
+        <module>spring-jersey</module>
     </modules>
 </project>

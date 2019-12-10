@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
-    <property name="LOG_FILE_HOME" value="../logs"/>
-    <property name="LOG_FILE_NAME" value="demo-java"/>
+    <property name="LOG_FILE_HOME" value="logs"/>
+    <property name="LOG_FILE_NAME" value="springboot-jersey"/>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
