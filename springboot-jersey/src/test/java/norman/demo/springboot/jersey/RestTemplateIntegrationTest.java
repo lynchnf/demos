@@ -1,4 +1,4 @@
-package norman.demo.springboot.webmvc;
+package norman.demo.springboot.jersey;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +15,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class RestTemplateTest {
+public class RestTemplateIntegrationTest {
     @Value("${local.server.port}")
     private int port;
     @Autowired
