@@ -16,5 +16,6 @@
         <module>springboot-webmvc</module>
         <module>springboot-webflux</module>
         <module>springboot-jersey</module>
+        <module>spring-webmvc</module>
     </modules>
 </project>
