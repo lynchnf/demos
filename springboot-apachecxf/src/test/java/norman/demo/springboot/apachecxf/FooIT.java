@@ -1,10 +1,10 @@
-package norman.demo.springboot.webflux;
+package norman.demo.springboot.apachecxf;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DemoHandlerTest {
+public class FooIT {
     @Before
     public void setUp() throws Exception {
     }
@@ -15,6 +15,5 @@ public class DemoHandlerTest {
 
     @Test
     public void hello() {
-        // TODO Test with StepVerifier
     }
 }
